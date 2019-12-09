@@ -21,6 +21,7 @@
     </form>
     <h1>Search Result</h1>
     @if(session()->has('data') && count(session()->get('data')) > 0)
+
         <table border="1">
             <thead>
             <tr>
@@ -30,17 +31,24 @@
             </tr>
             </thead>
             <tbody>
+
             @foreach(session()->get('data') as $user)
+
                 <tr>
                     <td> {{ $user['id'] }}</td>
                     <td> {{ $user['firstname'] }}</td>
                     <td> {{ $user['lastname'] }}</td>
                 </tr>
+
             @endforeach
+
             </tbody>
         </table>
+
     @else
+
         <?php echo 'Không có dữ liệu cần tìm kiếm'; ?>
+
     @endif
 </body>
 </html>

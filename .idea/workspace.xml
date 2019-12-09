@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d252896-475e-4ec8-8681-8e7eb5bcfb46" name="Default Changelist" comment="" />
+    <list default="true" id="2d252896-475e-4ec8-8681-8e7eb5bcfb46" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BT2Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BT2Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Phone.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Phone.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/bt2_index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bt2_index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -157,6 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575897347408</updated>
       <workItem from="1575897368686" duration="9360000" />
+      <workItem from="1575907186644" duration="159000" />
     </task>
     <servers />
   </component>

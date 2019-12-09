@@ -16,5 +16,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Route::get('bt2', 'BT2Controller@index')->name('bt2.show');
 Route::post('bt2', 'BT2Controller@search')->name('bt2.search');
