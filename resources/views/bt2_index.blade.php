@@ -26,8 +26,8 @@
             <thead>
             <tr>
                 <th>User ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
+                <th>Phone</th>
+                <th>Role</th>
             </tr>
             </thead>
             <tbody>
@@ -36,8 +36,8 @@
 
                 <tr>
                     <td> {{ $user['id'] }}</td>
-                    <td> {{ $user['firstname'] }}</td>
-                    <td> {{ $user['lastname'] }}</td>
+                    <td> {{ $user['phone']['number'] }}</td>
+                    <td> {{ $user['role'][0]['name'] }}</td>
                 </tr>
 
             @endforeach

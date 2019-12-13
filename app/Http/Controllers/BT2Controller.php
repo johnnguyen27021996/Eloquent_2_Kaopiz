@@ -16,35 +16,46 @@ class BT2Controller extends Controller
 
     public function search(Request $request)
     {
-        $array = array();
+        // $array = array();
         $user_id = $request->input('user_id');
         $number = $request->input('number');
         $role_name = $request->input('role_name');
 
-        $user = User::where('id', $user_id)->get()->toArray();
-        $phone = Phone::where('number', $number)->get();
-        $role = Role::where('name', $role_name)->get();
+        // $user = User::where('id', $user_id)->get()->toArray();
+        // $phone = Phone::where('number', $number)->get();
+        // $role = Role::where('name', $role_name)->get();
 
-        if(count($user) > 0){
-            foreach ($user as $data){
-                array_push($array, $data);
+        // if(count($user) > 0){
+        //     foreach ($user as $data){
+        //         array_push($array, $data);
+        //     }
+        // }
+
+        // if(count($phone) > 0){
+        //     $data_phone = Phone::find($phone[0]['id'])->user()->get()->toArray();
+        //     foreach ($data_phone as $data){
+        //         array_push($array, $data);
+        //     }
+        // }
+
+        // if(count($role) > 0){
+        //     $data_role = Role::find($role[0]['id'])->user()->get()->toArray();
+        //     foreach ($data_role as $data){
+        //         array_push($array, $data);
+        //     }
+        // }
+
+        $data = User::with('phone', 'role')->where('id', $user_id)->orWhereHas(
+            'phone', function($query) use ($number){
+                $query->where('number', $number);
             }
-        }
-
-        if(count($phone) > 0){
-            $data_phone = Phone::find($phone[0]['id'])->user()->get()->toArray();
-            foreach ($data_phone as $data){
-                array_push($array, $data);
+        )->orWhereHas(
+            'role', function($query) use ($role_name){
+                $query->where('name', $role_name);
             }
-        }
+        )->get();
 
-        if(count($role) > 0){
-            $data_role = Role::find($role[0]['id'])->user()->get()->toArray();
-            foreach ($data_role as $data){
-                array_push($array, $data);
-            }
-        }
+        return redirect()->route('bt2.show')->with('data', $data);
 
-        return redirect()->route('bt2.show')->with('data', $array);
     }
 }
